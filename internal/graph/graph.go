@@ -63,7 +63,7 @@ type Node struct {
 	Function *Node
 
 	// Values associated to this node. Flat is exclusive to this node,
-	// Cum includes all descendents.
+	// Cum includes all descendants.
 	Flat, FlatDiv, Cum, CumDiv int64
 
 	// In and out Contains the nodes immediately reaching or reached by
@@ -184,7 +184,7 @@ type NodeSet map[NodeInfo]bool
 // works as a unique identifier; however, in a tree multiple nodes may share
 // identical NodeInfos. A *Node does uniquely identify a node so we can use that
 // instead. Though a *Node also uniquely identifies a node in a graph,
-// currently, during trimming, graphs are rebult from scratch using only the
+// currently, during trimming, graphs are rebuilt from scratch using only the
 // NodeSet, so there would not be the required context of the initial graph to
 // allow for the use of *Node.
 type NodePtrSet map[*Node]bool

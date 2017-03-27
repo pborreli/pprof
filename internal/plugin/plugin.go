@@ -119,7 +119,7 @@ type Inst struct {
 
 // An ObjFile is a single object file: a shared library or executable.
 type ObjFile interface {
-	// Name returns the underlyinf file name, if available
+	// Name returns the underlying file name, if available
 	Name() string
 
 	// Base returns the base address to use when looking up symbols in the file.
